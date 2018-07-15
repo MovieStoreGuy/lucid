@@ -1,0 +1,28 @@
+---
+Scope:
+    Site:
+        - http://example.website
+        - https://example.website
+    Exclude:
+        - https://mail.example.website
+Report:
+    DNS:
+        - ValidCert
+        - DNSSECEnabled
+        - Subdomains
+        - WhoisGuard
+        - Records
+    Crawler:
+        - PageLinks
+        - CrossOriginLinks
+        - InsecureLinks
+        - InspectHeaders
+    Services:
+        - Kubernetes
+        - Nginx
+        - FTP
+        - Mail
+        - ssh
+    Network:
+        - CIDRAllocation
+        - Instances
