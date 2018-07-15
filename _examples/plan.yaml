@@ -5,13 +5,17 @@ Scope:
         - https://example.website
     Exclude:
         - https://mail.example.website
-Report:
+Check:
     DNS:
-        - ValidCert
         - DNSSECEnabled
+        - Records
         - Subdomains
         - WhoisGuard
-        - Records
+    SSL:
+        - Issuer
+        - ValidCert
+        - Protocols
+        - Ciphers
     Crawler:
         - PageLinks
         - CrossOriginLinks
@@ -26,3 +30,6 @@ Report:
     Network:
         - CIDRAllocation
         - Instances
+Report:
+  Level: all # (info, warn, issue, all)
+  Type: html 
